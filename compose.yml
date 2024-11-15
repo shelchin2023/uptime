@@ -7,7 +7,7 @@ services:
       - uptime-kuma:/app/data
       - ./telegram.js:/app/server/notification-providers/telegram.js
     ports:
-      -p 3001:3001
+      - "3001:3001"
     restart: always
 volumes:
   uptime-kuma:
