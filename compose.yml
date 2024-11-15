@@ -1,0 +1,13 @@
+version: "1.0"
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime
+    volumes:
+      - uptime-kuma:/app/data
+      - ./telegram.js:/app/server/notification-providers/telegram.js
+    ports:
+      -p 3001:3001
+    restart: always
+volumes:
+  uptime-kuma:
